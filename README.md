@@ -112,7 +112,19 @@ Purchase Order Endpoints
 
   ```json
   {
+    "po_number": "PO112",
+    "order_date": "2023-11-27T12:37:07.152186Z",
+    "delivery_date": "2023-12-15T12:00:00Z",
+    "items": [
+      {
+        "item": "Product A",
+        "quantity": 10
+      }
+    ],
+    "vendor": 2,
+    "quantity": 10,
     "status": "completed",
+
     "quality_rating": 4.5
   }
   ```
@@ -134,11 +146,13 @@ Test Acknowledge Purchase Order Endpoint
 
 Secure the API endpoints using token-based authentication.
 
+create a super user:
+
+```bash
+python manage.py createsuperuser
+```
+
 goto URL: GET /api/getToken/
-
-username: root
-
-password: root
 
 ## Testing
 

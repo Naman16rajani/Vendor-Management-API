@@ -151,9 +151,14 @@ create a super user:
 ```bash
 python manage.py createsuperuser
 ```
+Remember the username and password you enter
 
 goto URL: GET /api/getToken/
-
+```json
+{
+  "username": "yourusername",
+  "password": "yourpassword"
+}
 ## Testing
 
 Use tools like curl or Postman to test the API.
